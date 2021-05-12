@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true
 
+  has_many :slides
+
    extend ActiveHash::Associations::ActiveRecordExtensions 
    validates :sex_id, numericality: { other_than: 1 }
        
