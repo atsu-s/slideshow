@@ -26,19 +26,31 @@
       <%= link_to current_user.nickname, "#", class:  "user-nickname"%>
     </div>
 
-    <div class='container'>
-      <div class='single-item'>
+    <div class = 'introduction'>SLIDESHOWではこんなことができます</div>
+
+    <div class='preview'>
+      <div class='slider'>
         <div>
-          <h2>1</h2>
+          <h2>SHOWを創ったり</h2>
+          <%= image_tag 'home-image' ,class: "image", size:'600x600'%>
         </div>
         <div>
-          <h2>2</h2>
+          <h2>SHOWを観返したり</h2>
+          <%= image_tag 'sample' ,class: "image", size:'600x600'%>
         </div>
         <div>
-          <h2>3</h2>
+          <h2>他の人のSHOWを観たり</h2>
+          <%= image_tag 'sample2' ,class: "image", size:'600x600'%>
         </div>
+        <div>
+          <h3>コメントをすることもできます！</h3>
+          <h3>SLIDESHOWはあなたを退屈させません</h3>
+        </div>
+        <ul class ='post'>
+          <li class ='let'>Let's Create SHOW!</li>
+          <li><%= link_to 'create', "#", class: "create" %></li>
+        </ul>
       </div>
     </div>
-
   <%end%>
 </body>

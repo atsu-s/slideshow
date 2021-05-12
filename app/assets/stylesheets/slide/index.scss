@@ -56,7 +56,7 @@
      transform: translateY(0);
   }
 }
-
+// フェードイン記述
 .new {
   display: flex;
   justify-content: center;
@@ -87,7 +87,43 @@
   font-size: 30px;
 }
 
-.container {
+.introduction {
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 50px;
+  padding : 100px;
+}
+
+.image {
+  margin: 0 auto ;
+}
+
+.let {
+  box-sizing:  border-box;
+  color: palevioletred;
+  font-size: 100px;
+  padding: 5px;
+}
+
+.create {
+  box-sizing:  border-box;
+  font-size: 100px;
+  color: white;
+  background-color: #419be0;
+  border: solid 2px black;
+  text-decoration: none;
+  padding: 10px;
+}
+// slick
+.preview {
   margin: 0 auto;
   padding: 40px;
   width: 80%;
@@ -95,10 +131,26 @@
   background: #419be0;
 }
 
-.slick-slide {
-  font-size: 50px;
+.slider {
   text-align: center;
-  color: red;
+  color: #419be0;
   background: white;
-  height: 50px;
+  position: relative;
+}
+
+// FontAwesome
+.fa-arrow-alt-circle-left {
+  font-size: 50px;
+  position: absolute;
+  z-index: 100;
+  left: -100px;
+  top: 300px;
+}
+
+.fa-arrow-alt-circle-right {
+  font-size: 50px;
+  position: absolute;
+  z-index: 100;
+  right: -100px;
+  top: 300px
 }
