@@ -87,18 +87,18 @@
   font-size: 30px;
 }
 
-.fa-arrow-alt-circle-left {
-  font-size: 50px;
-  position: absolute;
-  z-index: 100;
-  left: -100px;
-  top: 300px;
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  color: #333;
+  background: #419be0;
 }
 
-.fa-arrow-alt-circle-right {
+.slick-slide {
   font-size: 50px;
-  position: absolute;
-  z-index: 100;
-  right: -100px;
-  top: 300px
+  text-align: center;
+  color: red;
+  background: white;
+  height: 50px;
 }

@@ -1,4 +1,4 @@
-@import './reset';
+
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 @import '@fortawesome/fontawesome-free/scss/solid';
@@ -21,6 +21,7 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
  *= require_self
  */
 
+@import './reset';
+@import "./slide/index";
 @import "slick-theme";
 @import "slick"; 
-@import "./slide/index.scss";

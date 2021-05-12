@@ -1,6 +1,9 @@
-$(function() {
-  $('.slider').slick({
-    prevArrow: '<i class="fas fa-arrow-alt-circle-left"></i>',
-    nextArrow: '<i class="fas fa-arrow-alt-circle-right"></i>'
-  })
+$(function(){
+  $('.single-item').slick({
+    accessibility: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    dots: true,
+    fade: true,
+  });
 });
