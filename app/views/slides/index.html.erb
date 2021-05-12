@@ -9,6 +9,7 @@
       <% end %>
     </ul>
   </div>
+
 </header>
 <body>
   <% unless user_signed_in? %>
@@ -27,7 +28,7 @@
 
     <div class="previews">
       <div class="slider">
-      <%= image_tag 'home-image' %>
+      <%= image_tag 'home-image', :size =>'320x480' %>
       <%= image_tag 'sample' %>
       <%= image_tag 'sample2' %>
       </div>
