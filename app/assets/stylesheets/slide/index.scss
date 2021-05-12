@@ -1,0 +1,92 @@
+.top-page-header {
+  background-color: palevioletred;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px ;
+}
+
+.top {
+  text-decoration: none;
+  font-size: 50px;
+  color: black;
+  font-family: 'Cherry Swash', cursive;
+}
+
+.sign {
+  display: flex;
+  padding-top: 20px;
+}
+
+.login, .logout{
+  color: white;
+  font-size: 20px;
+  border: solid 3px white;
+  text-decoration: none;
+  padding: 10px;
+  margin-right: 50px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+}
+
+.main-title {
+  font-size: 60px;
+}
+
+// フェードイン記述
+.main-title {
+  opacity: 0;
+  animation-name: fadein-bottom;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  font-family: 'Vollkorn', serif;
+}
+
+@keyframes fadein-bottom {
+  0% {
+     opacity: 0;
+     transform: translateY(20px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+
+.new {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up {
+  background-color: lightcoral;
+  color: wheat;
+  border: solid 3px orange;
+  text-decoration: none;
+  font-size: 50px;
+
+  padding: 40px;
+  margin-top: 10%;
+}
+.greeting {
+  display: flex;
+}
+
+.hello {
+  color: black;
+  font-size: 30px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.user-nickname {
+  color: black;
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 100px;
+}
