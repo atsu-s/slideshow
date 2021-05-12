@@ -24,20 +24,9 @@
 
 ### Association
 
-- has_many   :photos
 - has_many   :comments
 - belongs_to :user
-
-## photos テーブル
-
-| Column | Type       | Option                         |
-|--------|------------|--------------------------------|
-| image  | string     | null: false                    |
-| slide  | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :slide
+- has_many_attached :images
 
 ## comments テーブル
 
