@@ -1,0 +1,6 @@
+<%= form_with model: @slide, local: true do |f| %>
+  <label class="form-image">
+    <span class="image-file">画像</span>
+    <%= f.file_field "image", type: :file, class: "hidden" %>
+  </label>
+<% end %>

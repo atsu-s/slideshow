@@ -5,11 +5,19 @@
 </header>
 
 <body>
-  <%= form_with model: @item, local: true do |f| %>
+  <%= form_with model: @slide, local: true do |f| %>
     <%= f.text_area :title, class:"slide-title", placeholder:"Slide名（必須 20文字まで)", maxlength:"20" %>
-  <label class="form-image">
-    <span class="image-file">画像</span>
-    <%= f.file_field "image", type: :file, class: "hidden" %>
-  </label>
   <% end %>
+<section class="swiper-container loading">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <%= render partial: "image", locals: { slide: @slide }  %>
+      </div>
+    </div>
+  </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
 </body>
