@@ -1,15 +1,17 @@
-window.addEventListener('load', function(){
+
   const list = document.getElementById('list');
   const btn = document.getElementById('btn');
+  const countUpValue = 0;
 
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', function() {
     // 要素取得
     const ImageFile = document.getElementById("image_file");
     const Set = document.getElementById("set");
     // 要素複製
-    const clone_ImageFile = ImageFile.firstElementChild.cloneNode(true);
-
-    Set.after(clone_ImageFile);
+    const clone_ImageFile = ImageFile.cloneNode(true);
+    // id設定
+    // 表示
+    Set.appendChild(clone_ImageFile);
 
   })
   // const ImageList = document.getElementById('image-list');
@@ -35,4 +37,4 @@ window.addEventListener('load', function(){
   //     imageElement.appendChild(blobImage);
   //     ImageList.appendChild(imageElement);
   //   });
-});
+

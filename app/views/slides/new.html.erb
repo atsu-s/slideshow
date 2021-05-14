@@ -11,12 +11,21 @@
 <button id="btn">追加</button>
 <section class="swiper-container loading">
   <div class="swiper-container">
-    <div class="swiper-wrapper" id="image_file">
-      <div class="swiper-slide" id="set">
-        <%= render partial: "image", locals: { slide: @slide }  %>
+    <div class="swiper-wrapper" id="set">
+      <div class="swiper-slide" id="image_file">
+        <%= render partial: "image", locals: { slide: @slide } %>
       </div>
-      <div class="swiper-slide" id="set">
-        <%= render partial: "image", locals: { slide: @slide }  %>
+      <div class="swiper-slide">
+        <%= render partial: "image", locals: { slide: @slide } %>
+      </div>
+      <div class="swiper-slide">
+        <%= render partial: "image", locals: { slide: @slide } %>
+      </div>
+      <div class="swiper-slide">
+        <%= render partial: "image", locals: { slide: @slide } %>
+      </div>
+      <div class="swiper-slide">
+        <%= render partial: "image", locals: { slide: @slide } %>
       </div>
     </div>
   </div>
@@ -24,4 +33,7 @@
     <div class="swiper-button-next"></div>
   </div>
 </section>
+<div class="save-parent">
+  <%= f.submit "Save", class: "save"%>
+</div>
 </body>

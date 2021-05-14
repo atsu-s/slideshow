@@ -37,3 +37,19 @@
   max-height: 70vh;
   max-width: 60vh;
 }
+
+.save-parent {
+  text-align: right;
+}
+
+.save {
+  display: inline-block;
+  text-align: center;
+  box-sizing:  border-box;
+  font-size: 30px;
+  color: white;
+  background-color: #419be0;
+  border: solid 2px black;
+  margin: 50px;
+  padding: 10px;
+}
