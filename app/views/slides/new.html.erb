@@ -4,36 +4,34 @@
   </div>
 </header>
 
+<%= form_with model: @slide, url: slides_path, local: true do |f| %>
 <body>
-  <%= form_with model: @slide, local: true do |f| %>
-    <%= f.text_area :title, class:"slide-title", placeholder:"Slide名（必須 20文字まで)", maxlength:"20" %>
-  <% end %>
-<button id="btn">追加</button>
-<section class="swiper-container loading">
-  <div class="swiper-container">
-    <div class="swiper-wrapper" id="set">
-      <div class="swiper-slide" id="image_file">
-        <%= render partial: "image", locals: { slide: @slide } %>
-      </div>
-      <div class="swiper-slide">
-        <%= render partial: "image", locals: { slide: @slide } %>
-      </div>
-      <div class="swiper-slide">
-        <%= render partial: "image", locals: { slide: @slide } %>
-      </div>
-      <div class="swiper-slide">
-        <%= render partial: "image", locals: { slide: @slide } %>
-      </div>
-      <div class="swiper-slide">
-        <%= render partial: "image", locals: { slide: @slide } %>
+  <%= f.text_area :title, class:"slide-title", placeholder:"Slide名（必須 20文字まで)", maxlength:"20" %>
+  <button id="btn">追加</button>
+  <section class="swiper-container loading">
+    <div class="swiper-container">
+      <div class="swiper-wrapper" id="set">
+        <div class="swiper-slide" id="image_file">
+          <label class="form-image">
+            <span class="image-file">画像</span>
+            <%= f.file_field "images", name: 'slide[images][]', type: :file, size:'600x600', class: "hidden"%>
+          </label>
+        </div>
+        <div class="swiper-slide">
+          <label class="form-image">
+            <span class="image-file">画像</span>
+            <%= f.file_field "images", name: 'slide[images][]', type: :file, size:'600x600', class: "hidden"%>
+          </label>
+        </div>
       </div>
     </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+  <div class="save-parent">
+    <div class="save">
+    <%= f.submit "Save", class: :form_btn%>
   </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</section>
-<div class="save-parent">
-  <%= f.submit "Save", class: "save"%>
-</div>
 </body>
+<% end %>
