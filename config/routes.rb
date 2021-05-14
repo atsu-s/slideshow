@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root "slides#index"
   devise_for :users
 
-  resources :slide
+  resources :slides
 end

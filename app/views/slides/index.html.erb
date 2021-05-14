@@ -9,7 +9,6 @@
       <% end %>
     </ul>
   </div>
-
 </header>
 <body>
   <% unless user_signed_in? %>
@@ -48,7 +47,7 @@
         </div>
         <ul class ='post'>
           <li class ='let'>Let's Create SHOW!</li>
-          <li><%= link_to 'create', "#", class: "create" %></li>
+          <li><%= link_to 'create',  new_slide_path, class: "create" %></li>
         </ul>
       </div>
     </div>

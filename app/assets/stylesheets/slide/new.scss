@@ -1,0 +1,55 @@
+.slide-title {
+  display: flex;
+  width: 50%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin: 10px auto;
+  resize: none;
+}
+
+.form-image {
+  display: block;
+  height: 70vh;
+  width: 60vw;
+  border: solid 3px black;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.image-file {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: aquamarine;
+  margin: auto;
+  height: 3.2rem;
+  font-size: 30px;
+}
+
+.hidden {
+  margin: 100px;
+  display: none;
+  max-height: 70vh;
+  max-width: 60vh;
+}
+
+.save-parent {
+  text-align: right;
+}
+
+.save {
+  display: inline-block;
+  text-align: center;
+  box-sizing:  border-box;
+  font-size: 30px;
+  color: white;
+  background-color: #419be0;
+  border: solid 2px black;
+  margin: 50px;
+  padding: 10px;
+}
