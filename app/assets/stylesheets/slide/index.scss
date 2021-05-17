@@ -10,6 +10,11 @@
   font-size: 50px;
   color: black;
   font-family: 'Cherry Swash', cursive;
+  opacity: 0;
+  animation-name: fadein-bottom;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
 .sign {
@@ -74,16 +79,17 @@
 }
 .greeting {
   display: flex;
+  margin-right: 10px;
 }
 
 .hello {
-  color: black;
+  color: powderblue;
   font-size: 30px;
   text-decoration: none;
   margin: 0 10px;
 }
 .user-nickname {
-  color: black;
+  color: powderblue;
   font-size: 30px;
 }
 
@@ -153,4 +159,59 @@ h3 {
   z-index: 100;
   right: -100px;
   top: 300px
+}
+
+// 一覧表示
+.show-index {
+  color: #419be0;
+  opacity: 0;
+  animation-name: fadein-bottom;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.show-index {
+  font-size: 50px;
+}
+
+.slide-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.slide-list {
+  list-style: none;
+}
+
+
+.slide-title-content {
+  text-decoration: none;
+  font-size: 35px;
+  color: #333;
+  font-family: 'Cherry Swash', cursive;
+  display: flex;
+  opacity: 0;
+  animation-name: fadein-bottom;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+.slide-title-head {
+  color: purple;
+}
+
+.slide-img {
+  height: 40vh;
+  width: 30vw;
+  opacity: 0;
+  animation-name: fadein-bottom;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
