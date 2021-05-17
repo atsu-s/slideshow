@@ -3,6 +3,10 @@
 <div class='nav'>
     <ul class='sign'>
       <% if user_signed_in? %>
+        <div class = 'greeting'>
+          <div class='hello'>HELLO!</div>
+         <%= link_to current_user.nickname, "#", class:  "user-nickname"%>
+        </div>
         <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete, class: "logout" %></li>
       <% else %>
         <li><%= link_to 'LOGIN', new_user_session_path, class: "login" %></li>
@@ -20,11 +24,26 @@
       <%= link_to '新規登録はこちら', new_user_registration_path, class: "sign-up"%>
     </div>
   <%else%>
-    <div class = 'greeting'>
-      <div class='hello'>HELLO!</div>
-      <%= link_to current_user.nickname, "#", class:  "user-nickname"%>
+    <div class='show-index'>
+    <%= "#{current_user.nickname}'s Slide" %>
     </div>
-
+    <% if @slides.present? %>
+    <ul class="slide-lists">
+      <% @slides.each do |slide| %>
+        <li class='slide-list'>
+        <div class='slide-title-content'>
+          <div class='slide-title-head'>title:</div>
+          <%= slide.title %>
+        </div>
+        <%= link_to slide_path(slide.id), method: :get do %>
+          <div class='slide-img-content'>
+            <%= image_tag slide.images[1], class: "slide-img" %>
+          </div>
+        <% end %>
+        </li>
+      <% end %>
+    </ul>
+    <% else %>
     <div class = 'introduction'>SLIDESHOWではこんなことができます</div>
 
     <div class='preview'>
@@ -51,5 +70,6 @@
         </ul>
       </div>
     </div>
+    <% end %>
   <%end%>
 </body>
