@@ -1,0 +1,86 @@
+.slide-creator {
+  display: flex;
+  font-size: 60px;
+  justify-content: center;
+}
+
+.slide-creator-name {
+  display: flex;
+  color: aqua;
+  font-size: 50px;
+  justify-content: center;
+}
+
+.slide-creator-wave {
+  color: peachpuff;
+}
+
+.slide-top {
+  display: flex;
+  color: black;
+  font-size: 50px;
+  justify-content: center;
+}
+
+.slide-top-img {
+  display: flex;
+  border: outset 10px burlywood;
+  height: 60vh;
+  width: 50vw;
+  margin: 10px auto;
+}
+
+.slide-middle {
+  display: flex;
+  font-size: 50px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slide-middle-title {
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+}
+.slide-look {
+  display: inline-flex;
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+  border: groove 5px purple;
+  justify-content: center;
+}
+
+.slide-edit {
+  display: inline-flex;
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+  border: groove 5px purple;
+  justify-content: center;
+}
+
+.slide-destroy {
+  display: inline-flex;
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+  border: groove 5px purple;
+  justify-content: center;
+}
+
+.slide-comment {
+  display: inline-flex;
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+  border: groove 5px purple;
+  justify-content: center;
+  padding: 0 28px;
+}

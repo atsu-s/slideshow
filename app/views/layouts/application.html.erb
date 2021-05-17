@@ -32,24 +32,27 @@
             },
         })
       </script> %>
-  <script>
-  var mySwiper = new Swiper ('.swiper-container', {
-  effect: 'coverflow',
-  slidesPerView: 1,
-  centeredSlides: true,
-  loop: false,
-  coverflowEffect: {
+    <script>
+    var mySwiper = new Swiper ('.swiper-container', {
+    effect: 'coverflow',
+    slidesPerView: 2,
+    centeredSlides: true,
+    loop: false,
+    coverflowEffect: {
       slideShadows: false,
-  },
-  pagination: {
+    },
+    pagination: {
       el: '.swiper-pagination',
       clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-})
-</script>
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 2000,
+    },
+  })
+  </script>
   </body>
 </html>
