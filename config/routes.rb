@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root "slides#index"
   devise_for :users
 
-  resources :slides
+  resources :slides do
+    resources :images
+  end
 end

@@ -1,0 +1,18 @@
+<body>
+<section class="swiper-container loading">
+  <div class="swiper-container">
+    <div class="swiper-wrapper" >
+      <% @slide.images.each do |image| %>
+        <div class="swiper-slide" >
+          <%= image_tag image, class:"slide-show-image", size:'600x600' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+  <div class="pagination-wrap">
+    <p class="stopbtn stop"></p>  <!-- 停止ボタン -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+</body>

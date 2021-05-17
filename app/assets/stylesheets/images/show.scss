@@ -1,0 +1,58 @@
+// Place all the styles related to the images controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.slide-show-image {
+  display: flex;
+  background-color: palevioletred;
+  margin: 0 auto;
+}
+
+.stopbtn {
+  cursor: pointer;
+  width: 20px;
+  height: 15px;
+}
+
+.stopbtn.stop {
+position: relative;
+display: inline-block;
+
+&:before, &:after {
+  position: absolute;
+  top: 0;
+  content: '';
+    width: 3px;
+    height: 15px;
+  background-color: pink;
+}
+
+&:before {
+  left: 5px;
+}
+
+&:after {
+  right: 5px;
+}
+}
+
+.stopbtn.start {
+position: relative;
+display: inline-block;
+
+&:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 14px;
+  border-color: transparent transparent transparent pink;
+}
+
+&:after {
+  display: none;
+}
+}

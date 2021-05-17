@@ -18,7 +18,7 @@
     <div class='slide-creator-wave'>〜</div>
   </div>
   <div class='flex'>
-    <%= link_to 'SHOWを観る', "#", class: "slide-look"%>
+    <%= link_to 'SHOWを観る', slide_image_path(@slide.id), method: :get, class: "slide-look"%>
   </div>
   <div class='flex'>
     <%= link_to 'SHOWを直す', "#", class: "slide-edit"%>

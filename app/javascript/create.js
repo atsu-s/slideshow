@@ -1,19 +1,4 @@
 
-  const list = document.getElementById('list');
-  const btn = document.getElementById('btn');
-  const countUpValue = 0;
-
-  btn.addEventListener('click', function() {
-    // 要素取得
-    const ImageFile = document.getElementById("image_file");
-    const Set = document.getElementById("set");
-    // 要素複製
-    const clone_ImageFile = ImageFile.cloneNode(true);
-    // id設定
-    // 表示
-    Set.appendChild(clone_ImageFile);
-
-  })
   // const ImageList = document.getElementById('image-list');
   // document.getElementById('message_image').addEventListener('change', function(e){
   //   const file = e.target.files[0];
