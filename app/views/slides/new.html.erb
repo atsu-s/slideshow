@@ -6,6 +6,7 @@
 
 <%= form_with model: @slide, url: slides_path, local: true do |f| %>
 <body>
+<div class='nil'></div>
   <%= f.text_area :title, class:"slide-title", placeholder:"Slide名（必須 20文字まで)", maxlength:"20" %>
   <button id="btn">追加</button>
   <section class="swiper-container loading">

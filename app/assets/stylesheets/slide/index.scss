@@ -1,8 +1,14 @@
+.nil {
+  height: 10vh;
+}
+
 .top-page-header {
   background-color: palevioletred;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   padding: 0 50px ;
+  position: fixed;
 }
 
 .top {
