@@ -16,6 +16,10 @@ class SlidesController < ApplicationController
     end
   end
 
+  def show
+    @slide = Slide.find(params[:id])
+  end
+
   private
   def slide_params
     params.require(:slide).permit(:title, images: []).merge(user_id: current_user.id)

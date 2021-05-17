@@ -1,0 +1,32 @@
+<header class='top-page-header'>
+  <div><%= link_to "SLIDESHOW", root_path, class:  "top"%></div>
+</header>
+<body>
+<div class='nil'></div>
+  <div class='slide-creator'>Slide Creator</div>
+  <div class='slide-creator-name'>
+    <div class='slide-creator-wave'>〜</div>
+    <%= @slide.user.nickname %>
+    <div class='slide-creator-wave'>〜</div>
+  </div>
+  <div class='slide-top'>Slide's Top Image</div>
+  <%= image_tag @slide.images[1], class: "slide-top-img" %>
+  <div class='slide-middle'>Slide's Title</div>
+  <div class='slide-middle-title'>
+    <div class='slide-creator-wave'>〜</div>
+    <%= @slide.title %>
+    <div class='slide-creator-wave'>〜</div>
+  </div>
+  <div class='flex'>
+    <%= link_to 'SHOWを観る', "#", class: "slide-look"%>
+  </div>
+  <div class='flex'>
+    <%= link_to 'SHOWを直す', "#", class: "slide-edit"%>
+  </div>
+  <div class='flex'>
+    <%= link_to 'SHOWを消す', "#", class: "slide-destroy"%>
+  </div>
+    <div class='flex'>
+    <%= link_to 'Comment', "#", class: "slide-comment"%>
+  </div>
+</body>
