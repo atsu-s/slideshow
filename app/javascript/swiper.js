@@ -31,19 +31,4 @@
 //   }
 // })();
 
-// $(window).on('load', function() {
-//   $('.stopbtn').on('click', function() {
-//       var _class = $(this).attr('class');
-//       if (_class == 'stopbtn stop') {
-//           $(this)
-//               .addClass('start')
-//               .removeClass('stop');
-//               swiper.autoplay.stop();
-//       } else {
-//           $(this)
-//               .addClass('stop')
-//               .removeClass('start');
-//               swiper.autoplay.start();
-//       }
-//   });
-// });
+
