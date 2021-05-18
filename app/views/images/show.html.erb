@@ -1,3 +1,6 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.css">
+</head>
 <body>
 <section class="swiper-container loading">
   <div class="swiper-container">
@@ -15,4 +18,28 @@
     <div class="swiper-pagination"></div>
   </div>
 
+  <%# swiper %>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
+    <script>
+    var mySwiper = new Swiper ('.swiper-container', {
+    effect: 'coverflow',
+    slidesPerView: 2,
+    centeredSlides: true,
+    loop: false,
+    coverflowEffect: {
+      slideShadows: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 2000,
+    },
+  })
+  </script>
 </body>
