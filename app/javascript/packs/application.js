@@ -11,6 +11,7 @@ require("channels")
 require('jquery')
 require('slick.js')
 require('create.js')
+require('../preview')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

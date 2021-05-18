@@ -16,15 +16,16 @@
     <div class="swiper-container">
       <div class="swiper-wrapper" id="set">
         <div class="swiper-slide" id="image_file">
-          <label class="form-image">
+          <label id="form_image">
             <span class="image-file">画像</span>
-            <%= f.file_field "images", name: 'slide[images][]', type: :file, size:'600x600', class: "hidden"%>
+            <%= f.file_field "images", name: 'slide[images][]', type: :file, class: "hidden", id: 'message_image'%>
+            <div id="image-list"></div>
           </label>
         </div>
         <div class="swiper-slide">
-          <label class="form-image">
+          <label id="form_image" >
             <span class="image-file">画像</span>
-            <%= f.file_field "images", name: 'slide[images][]', type: :file, size:'600x600', class: "hidden"%>
+            <%= f.file_field "images", name: 'slide[images][]', type: :file, class: "hidden"%>
           </label>
         </div>
       </div>
@@ -38,6 +39,7 @@
     <%= f.submit "Save", class: :form_btn%>
   </div>
 <% end %>
+
 
     <%# swiper %>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
