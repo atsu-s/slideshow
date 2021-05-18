@@ -25,12 +25,12 @@
       <%= link_to '新規登録はこちら', new_user_registration_path, class: "sign-up"%>
     </div>
   <%else%>
+    <% if current_user.slides.present? %>
     <div class='show-index'>
     <%= "#{current_user.nickname}'s Slide" %>
     </div>
-    <% if @slides.present? %>
     <ul class="slide-lists">
-      <% @slides.each do |slide| %>
+      <% current_user.slides.each do |slide| %>
         <li class='slide-list'>
         <div class='slide-title-content'>
           <div class='slide-title-head'>title:</div>
@@ -38,12 +38,13 @@
         </div>
         <%= link_to slide_path(slide.id), method: :get do %>
           <div class='slide-img-content'>
-            <%= image_tag slide.images[1], class: "slide-img" %>
+            <%= image_tag slide.images[0], class: "slide-img" %>
           </div>
         <% end %>
         </li>
       <% end %>
     </ul>
+    <%= link_to 'create',  new_slide_path, class: "create" %>
     <% else %>
     <div class = 'introduction'>SLIDESHOWではこんなことができます</div>
 
