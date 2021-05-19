@@ -9,7 +9,7 @@
   resize: none;
 }
 
-#form_image {
+.form-image {
   display: block;
   height: 70vh;
   width: 60vw;
@@ -52,17 +52,22 @@
   display: inline-block;
   text-align: center;
   box-sizing:  border-box;
-  font-size: 30px;
+  font-size: 35px;
   color: white;
-  background-color: #419be0;
-  border: solid 2px black;
-  margin: 50px;
+  background-color: palevioletred;
+  border: solid 4px black;
   padding: 10px;
+  margin-right: 5vw;
+}
+
+.form_btn {
+  display: none;
 }
 
 img {
   position: relative;
-  height: auto;
+  height: 70vh;
+  width: 50vw;
   border: 2px solid black;
   z-index: 100;
 }
