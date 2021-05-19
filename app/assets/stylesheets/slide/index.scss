@@ -2,28 +2,6 @@
   height: 10vh;
 }
 
-.top-page-header {
-  background-color: palevioletred;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 50px ;
-  position: fixed;
-  z-index: 1000;
-}
-
-.top {
-  text-decoration: none;
-  font-size: 50px;
-  color: black;
-  font-family: 'Cherry Swash', cursive;
-  opacity: 0;
-  animation-name: fadein-bottom;
-  animation-duration: 3s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-
 .sign {
   display: flex;
   padding-top: 20px;
