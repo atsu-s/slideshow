@@ -20,13 +20,27 @@
 |--------------------|------------|--------------------------------|
 | title              | string     | null: false                    |
 | user               | references | null: false, foreign_key: true |
+| share              | references | null: false, foreign_key: true |
 
 
 ### Association
 
 - has_many   :comments
 - belongs_to :user
+- belongs_to :share
 - has_many_attached :images
+
+
+## shares テーブル
+
+| Column | Type       | Option                         |
+|--------|------------|--------------------------------|
+| text   | text       | null: false                    |
+| slide  | references | null: false, foreign_key: true |
+
+### Association
+
+- has_many slides
 
 ## comments テーブル
 
