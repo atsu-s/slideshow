@@ -1,0 +1,24 @@
+<%= form_with model: @share, url: slide_shares_path, method: :post, local: true do |f| %>
+<body>
+  <div class='nil'></div>
+  <div class='slide-creator'>Slide Creator</div>
+  <div class='slide-creator-name'>
+    <div class='slide-creator-wave'>〜</div>
+    <%= @slide.user.nickname %>
+    <div class='slide-creator-wave'>〜</div>
+  </div>
+  <div class='slide-top'>Slide's Top Image</div>
+  <%= image_tag @slide.images[0], class: "slide-top-img" %>
+  <div class='slide-middle'>Slide's Title</div>
+  <div class='slide-middle-title'>
+    <div class='slide-creator-wave'>〜</div>
+    <%= @slide.title %>
+    <div class='slide-creator-wave'>〜</div>
+  </div>
+  <%= f.text_area :text, class:"share-text", placeholder:"Slide説明（必須 100文字まで)", maxlength:"100" %>
+  <label>
+    <div class="share">Share</div>
+    <%= f.submit "Share", class: :form_btn%>
+  </label>
+</body>
+<% end %>
