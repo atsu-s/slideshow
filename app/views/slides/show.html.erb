@@ -22,9 +22,9 @@
   <div class='flex'>
     <%= link_to 'SHOWを観る', slide_image_path(@slide.id), method: :get, class: "slide-look"%>
   </div>
-  <div class='flex'>
-    <%= link_to 'SHOWを直す', "#", class: "slide-edit"%>
-  </div>
+  <%# <div class='flex'>
+    <%= link_to 'SHOWを直す', edit_slide_path(@slide.id), method: :get, class: "slide-edit"%>
+  <%# </div> %>
   <div class='flex'>
     <div class="delete-btn" id="delete_btn">SHOWを消す</div>
   </div>
