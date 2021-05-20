@@ -43,9 +43,21 @@
 //   width: 80vw;
 //   z-index: 1000;
 // }
+.reset-save {
+  display: flex;
+  justify-content: space-evenly;
+}
 
-.save-parent {
-  text-align: right;
+.reset {
+  display: inline-block;
+  text-align: center;
+  box-sizing:  border-box;
+  font-size: 35px;
+  color: white;
+  background-color: palevioletred;
+  border: solid 4px black;
+  padding: 10px;
+  margin-right: 5vw;
 }
 
 .save {

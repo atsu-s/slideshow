@@ -4,10 +4,13 @@
 </head>
 <header class='top-page-header'>
   <div><%= link_to "SLIDESHOW", root_path, class:  "top"%></div>
-  <label class="save-parent">
-    <div class="save">Save</div>
-    <%= f.submit "Save", class: :form_btn%>
-  </label>
+  <div class="reset-save">
+      <div class="reset" id="reset_btn">Reset</div>
+    <label>
+      <div class="save">Save</div>
+      <%= f.submit "Save", class: :form_btn%>
+    </label>
+  </div>
 </header>
 
 <body>
