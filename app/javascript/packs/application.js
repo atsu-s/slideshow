@@ -10,6 +10,7 @@ require("channels")
 require('jquery')
 require('slick.js')
 require('create.js')
+require('../delete')
 require('../preview')
 
 

@@ -3,6 +3,8 @@
 </header>
 <body>
 <div class='nil'></div>
+<div class="show-screen" id="show_screen">
+  <div class='nil'></div>
   <div class='slide-creator'>Slide Creator</div>
   <div class='slide-creator-name'>
     <div class='slide-creator-wave'>〜</div>
@@ -24,9 +26,17 @@
     <%= link_to 'SHOWを直す', "#", class: "slide-edit"%>
   </div>
   <div class='flex'>
-    <%= link_to 'SHOWを消す', "#", class: "slide-destroy"%>
+    <div class="delete-btn" id="delete_btn">SHOWを消す</div>
   </div>
     <div class='flex'>
     <%= link_to 'Comment', "#", class: "slide-comment"%>
   </div>
+</div>
+
+<%# 削除 %>
+  <div class="really" id="delete_screen">本当に削除してもよろしいですか？</div>
+  <div class="slide-destroy" id="slide_destroy">
+    <div class="cancel-btn" id="cancel_btn">Cancel</div>
+    <%= link_to "Delete", slide_path(@slide.id), method: :delete, class:"slide-destroy-btn", id:"delete" %>
+  <div>
 </body>
