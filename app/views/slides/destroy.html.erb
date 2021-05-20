@@ -1,0 +1,14 @@
+<header class='top-page-header'>
+  <div><%= link_to "SLIDESHOW", root_path, class:  "top"%></div>
+</header>
+<body>
+<div class='nil'></div>
+<div class="good-bye">
+  <%= "Good Bye! #{@slide.title}" %>
+</div>
+<%= link_to root_path, class: "go-home-btn" do%>
+  <div class="go-home">GO HOME
+    <i class="fas fa-undo-alt"></i>
+  </div>
+<% end %>
+</body>
