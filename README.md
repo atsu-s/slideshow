@@ -27,7 +27,7 @@
 
 - has_many   :comments
 - belongs_to :user
-- belongs_to :share
+- has_one :share
 - has_many_attached :images
 
 
@@ -40,7 +40,7 @@
 
 ### Association
 
-- has_many slides
+- belongs_to slide
 
 ## comments テーブル
 
