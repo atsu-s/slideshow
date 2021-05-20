@@ -22,3 +22,11 @@
   //     ImageList.appendChild(imageElement);
   //   });
 
+window.addEventListener('load', function(){
+  const resetButton = document.getElementById("reset_btn");
+  const imageContent = document.querySelector('img');
+
+  resetButton.addEventListener('click', function(){
+    window.location.reload();
+  })
+});
