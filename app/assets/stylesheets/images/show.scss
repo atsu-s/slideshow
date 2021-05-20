@@ -2,11 +2,69 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.slide-show-image {
-  display: flex;
-  background-color: palevioletred;
-  margin: 0 auto;
+.slide-start-screen {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 1;
+  animation-name: fadeOut;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  font-family: 'Vollkorn', serif;
 }
+
+.slide-show-title {
+  display: flex;
+  justify-content: center;
+  margin: 50vh auto;
+  font-size: 50px;
+  color: white;
+  font-family: 'Cherry Swash', cursive;
+  padding-bottom: 3px;
+  opacity: 1;
+  animation-name: fadeOut;
+  animation-duration: 10s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  font-family: 'Vollkorn', serif;
+}
+
+// フェードアウト記述
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+// フェードアウト記述
+
+.slide-around {
+  padding: 15vh 0 10vh 0;
+  background-color: paleturquoise;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  font-family: 'Vollkorn', serif;
+}
+
+// フェードイン記述
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// フェードイン記述
 
 .stopbtn {
   cursor: pointer;
@@ -56,3 +114,23 @@ display: inline-block;
   display: none;
 }
 }
+
+.navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: paleturquoise;
+  height: 5vh;
+  width: 100vw;
+  margin-right: 50vh;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  font-family: 'Vollkorn', serif;
+  z-index: 0;
+}
+

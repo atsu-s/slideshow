@@ -2,30 +2,51 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.css">
 </head>
 <body>
-<section class="swiper-container loading">
-  <div class="swiper-container">
-    <div class="swiper-wrapper" >
-      <% @slide.images.each do |image| %>
-        <div class="swiper-slide" >
-          <%= image_tag image, class:"slide-show-image", size:'600x600' %>
-        </div>
-      <% end %>
+<div class="slide-start-screen">
+  <div class="slide-show-title"><%= @slide.title %></div>
+</div>
+<div class="slide-around">
+  <section class="swiper-container loading">
+    <div class="swiper-container">
+      <div class="swiper-wrapper" >
+        <% @slide.images.each do |image| %>
+          <div class="swiper-slide" >
+            <%= image_tag image %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </div>
-</section>
-  <div class="pagination-wrap">
-    <p class="stopbtn stop"></p>  <!-- 停止ボタン -->
+  <section>
+  <div class="navigation">
     <div class="swiper-pagination"></div>
   </div>
+    <%= link_to :back, class: "roll-back" do%>
+      <div class="roll-back-btn">BACK
+        <i class="fas fa-undo-alt"></i>
+      </div>
+    <% end %>
+
+  <%# <p class="stopbtn stop"></p>  <!-- 停止ボタン --> %>
+  <div class="pagination-wrap">
+</div>
 
   <%# swiper %>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
 <script>
-var swiper = new Swiper('.swiper-container', {
+var huga = 0;
+var hoge = setInterval(function() {
+    console.log(huga);
+    huga++;
+    //終了条件
+  if (huga == 1200) {
+    clearInterval(hoge);
+    console.log("終わり");
+    
+  var swiper = new Swiper('.swiper-container', {
     effect: 'coverflow',
     slidesPerView: 2,
-    loop: false,
-    autoplay: { delay: 2000 },
+    loop: true,
+    autoplay: { delay: 3000 },
     centeredSlides: true,
     pagination: {
         el: '.swiper-pagination',
@@ -34,23 +55,26 @@ var swiper = new Swiper('.swiper-container', {
     coverflowEffect: {
       slideShadows: false,
     },
+  });
+
+  // $(window).on('load', function() {
+  //   $('.stopbtn').on('click', function() {
+  //       var _class = $(this).attr('class');
+  //       if (_class == 'stopbtn stop') {
+  //           $(this)
+  //               .addClass('start')
+  //               .removeClass('stop');
+  //               swiper.autoplay.stop();
+  //       } else {
+  //           $(this)
+  //               .addClass('stop')
+  //               .removeClass('start');
+  //               swiper.autoplay.start();
+  //         }
+  //       });
+  //     });
+  }
 });
 
-$(window).on('load', function() {
-    $('.stopbtn').on('click', function() {
-        var _class = $(this).attr('class');
-        if (_class == 'stopbtn stop') {
-            $(this)
-                .addClass('start')
-                .removeClass('stop');
-                swiper.autoplay.stop();
-        } else {
-            $(this)
-                .addClass('stop')
-                .removeClass('start');
-                swiper.autoplay.start();
-        }
-    });
-});
 </script>
 </body>
