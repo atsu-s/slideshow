@@ -7,14 +7,14 @@ window.addEventListener('load', function(){
   const cancelButton = document.getElementById("cancel_btn")
   const deleteSubmit = document.getElementById("delete")
 
-  deleteButton,addEventListener('click', function(){
+  deleteButton.addEventListener('click', function(){
     showScreen.setAttribute("style", "display:none;");
     deleteScreen.setAttribute("style", "display:flex;");
     slideDestroy.setAttribute("style", "display:flex;");
     cancelButton.setAttribute("style", "display:inline;");
     deleteSubmit.setAttribute("style", "display:inline;");
-
-    cancelButton,addEventListener('click', function(){
+  
+    cancelButton.addEventListener('click', function(){
       window.location.reload();
     });
   });
