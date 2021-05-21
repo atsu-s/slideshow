@@ -12,4 +12,5 @@ class User < ApplicationRecord
    validates :sex_id, numericality: { other_than: 1 }
        
    belongs_to :sex
+   has_many :comments
 end
