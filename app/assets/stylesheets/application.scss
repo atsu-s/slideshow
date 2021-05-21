@@ -55,17 +55,17 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
   animation-fill-mode: forwards;
 }
 
+.roll-back {
+  color: white;
+}
+
 .roll-back-btn {
   display: block;
+  text-decoration: none;
   text-align: center;
   color: white;
   font-size: 20px;
   background-color: yellowgreen;
   width: 10vw;
   margin-left: auto;
-}
-
-.roll-back {
-  text-decoration: none;
-  color: white;
 }

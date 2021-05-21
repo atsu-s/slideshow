@@ -21,11 +21,13 @@
     <div class="swiper-pagination"></div>
   </div>
   <%# 戻るボタン %>
-  <%= link_to :back, class: "roll-back" do%>
-    <div class="roll-back-btn">BACK
-      <i class="fas fa-undo-alt"></i>
-    </div>
-  <% end %>
+  <div class="roll-back">
+    <%= link_to :back, class: "roll-back-btn" do%>
+      <div class="back">BACK
+        <i class="fas fa-undo-alt"></i>
+      </div>
+    <% end %>
+  </div>
 
   <%# <p class="stopbtn stop"></p>  <!-- 停止ボタン --> %>
   <div class="pagination-wrap">
