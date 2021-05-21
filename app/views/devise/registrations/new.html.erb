@@ -1,7 +1,8 @@
 <header class='top-page-header'>
-  <div class = 'top'>SLIDESHOW</div>
+  <div><%= link_to "SLIDESHOW", root_path, class:  "top"%></div>
 </header>
 <body>
+<div class="nil"></div>
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
 <div class='form-wrap'>
   <div class='form-header'>
