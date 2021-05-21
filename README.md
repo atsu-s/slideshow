@@ -44,11 +44,11 @@
 
 ## comments テーブル
 
-| Column | Type       | Option                         |
-|--------|------------|--------------------------------|
-| text   | text       | null: false                    |
-| user   | references | null: false, foreign_key: true |
-| slide  | references | null: false, foreign_key: true |
+| Column         | Type       | Option                         |
+|----------------|------------|--------------------------------|
+| comment_text   | string     | null: false                    |
+| user           | references | null: false, foreign_key: true |
+| slide          | references | null: false, foreign_key: true |
 
 ### Association
 

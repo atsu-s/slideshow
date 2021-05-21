@@ -30,14 +30,7 @@
     <%= link_to 'SHOWを直す', edit_slide_path(@slide.id), method: :get, class: "slide-edit"%>
   <%# </div> %>
   <div class="flex">
-    <%= link_to 'Comment', "#", class: "slide-comment"%>
+    <%= link_to 'Comment', slide_comments_path(@slide.id), class: "slide-comment"%>
   </div>
 </div>
-
-<%# 削除 %>
-  <div class="really" id="delete_screen">本当に削除してもよろしいですか？</div>
-  <div class="slide-destroy" id="slide_destroy">
-    <div class="cancel-btn" id="cancel_btn">Cancel</div>
-    <%= link_to "Delete", slide_path(@slide.id), method: :delete, class:"slide-destroy-btn", id:"delete" %>
-  <div>
 </body>

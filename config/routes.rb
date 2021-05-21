@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :slides do
     resources :images
     resources :shares
+    resources :comments
   end
 end
