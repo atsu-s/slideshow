@@ -1,7 +1,8 @@
 class SharesController < ApplicationController
-  before_action :set_slide, only: [:new, :create]
+  before_action :set_slide, only: [:index, :new, :create, :show]
 
   def index
+    @shares = Share.order("created_at DESC")
   end
 
   def new
@@ -15,6 +16,10 @@ class SharesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @share = Share.find(params[:id])
   end
 
   private

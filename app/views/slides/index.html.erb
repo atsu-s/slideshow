@@ -45,6 +45,7 @@
       <% end %>
     </ul>
     <%= link_to 'create',  new_slide_path, class: "create" %>
+    <%= link_to 'share', slide_shares_path(@slides.ids), method: :get, class: "go-share"%>
     <% else %>
     <div class = 'introduction'>SLIDESHOWではこんなことができます</div>
 

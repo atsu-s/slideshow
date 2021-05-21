@@ -6,5 +6,5 @@ class Slide < ApplicationRecord
 
   belongs_to :user
   has_many_attached :images
-  has_one :share
+  has_one :share, dependent: :destroy
 end
