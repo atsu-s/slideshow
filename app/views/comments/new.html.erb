@@ -1,0 +1,24 @@
+<header class="top-page-header">
+  <div><%= link_to "SLIDESHOW", root_path, class:  "top"%></div>
+</header>
+<body>
+  <div class="nil"></div>
+  <div>※モラルを守ってコメントしましょう</div>
+  <%= form_with model: [@slide, @comment],url: slide_comments_path, method: :post, local: true do |f| %>
+    <div class="field">
+      <%= f.label :comment, "Comment form" %><br />
+      <%= f.text_area :comment_text, placeholder:"Comment（必須 50文字まで)", class:"comment-text" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "送信する", class: :form__btn  %>
+    </div>
+  <% end %>
+  <%# 戻るボタン %>
+  <div class="roll-back">
+    <%= link_to slide_comments_path, class: "roll-back-btn" do%>
+      <div class="back">BACK
+        <i class="fas fa-undo-alt"></i>
+      </div>
+    <% end %>
+  </div>
+</body>
