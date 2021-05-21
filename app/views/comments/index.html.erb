@@ -3,10 +3,12 @@
 </header>
 <body>
   <div class="nil"></div>
-  <%= "#{@slide.title}'s' Comment Room"%>
-  <ul class="comments_lists">
+  <div class="room-name">
+    <%= "#{@slide.title}'s Comment Room" %>
+  </div>
+  <ul class="comments-lists">
     <% @comments.each do |comment| %>
-      <li class="comments_list">
+      <li class="comments-list">
         <%= comment.user.nickname %>
         <%= comment.comment_text%>
       </li>
@@ -14,7 +16,7 @@
   </ul>
   <div class="create-comment">
     <%= link_to "Create Comment", new_slide_comment_path, class: "comment-btn"%>
-
+  </div>
   <%# 戻るボタン %>
   <div class="roll-back">
     <%= link_to slide_shares_path, class: "roll-back-btn" do%>
