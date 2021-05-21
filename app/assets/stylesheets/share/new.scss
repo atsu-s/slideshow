@@ -1,0 +1,41 @@
+.share-text {
+  display: flex;
+  margin: 0 auto;
+  padding: 5px;
+  height: 10vh;
+  width: 40vw;
+}
+
+.alert {
+  text-align: center;
+}
+
+.red-alert {
+  color: red;
+  font-size: 20px;
+}
+
+.alert-text {
+  padding: 5px;
+}
+
+.alert-end {
+  margin-bottom: 10px;
+}
+
+.share-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.share {
+  display: inline;
+  box-sizing: border-box;
+  font-size: 50px;
+  color: white;
+  background-color: #419be0;
+  border: solid 2px black;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 auto;
+}

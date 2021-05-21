@@ -1,0 +1,41 @@
+<header class='top-page-header'>
+<div><%= link_to "SLIDESHOW", root_path, class:  "top"%></div>
+<div class='nav'>
+    <ul class='sign'>
+      <% if user_signed_in? %>
+        <div class = 'greeting'>
+          <div class='hello'>HELLO!</div>
+         <%= link_to current_user.nickname, "#", class:  "user-nickname"%>
+        </div>
+        <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <% end %>
+    </ul>
+  </div>
+</header>
+<body>
+<div class='nil'></div>
+  <% if user_signed_in? %>
+    <% if @slide.share.present? %>
+      <div class='show-index'>
+        <%= "Every one's Slide" %>
+      </div>
+      <ul class="slide-lists">
+        <% @shares.each do |share| %>
+          <li class='slide-list'>
+            <div class='slide-title-content'>
+              <div class='slide-title-head'>title:</div>
+              <%= share.slide.title %>
+            </div>
+              <%= link_to slide_share_path(share.id, @slide.id), method: :get do %>
+                <div class='slide-img-content'>
+                  <%= image_tag share.slide.images[0], class: "slide-img" %>
+                </div>
+              <% end %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <div class=no-slide>No Slide</div>
+    <% end %>
+  <% end %>
+</body>
