@@ -16,24 +16,26 @@
 <div class='nil'></div>
   <% if user_signed_in? %>
     <% if @slide.share.present? %>
-    <div class='show-index'>
-    <%= "Every one's Slide" %>
-    </div>
-    <ul class="slide-lists">
-      <% @shares.each do |share| %>
-        <li class='slide-list'>
-        <div class='slide-title-content'>
-          <div class='slide-title-head'>title:</div>
-          <%= share.slide.title %>
-        </div>
-        <%= link_to slide_share_path(share.id, @slide.id), method: :get do %>
-          <div class='slide-img-content'>
-            <%= image_tag share.slide.images[0], class: "slide-img" %>
-          </div>
+      <div class='show-index'>
+        <%= "Every one's Slide" %>
+      </div>
+      <ul class="slide-lists">
+        <% @shares.each do |share| %>
+          <li class='slide-list'>
+            <div class='slide-title-content'>
+              <div class='slide-title-head'>title:</div>
+              <%= share.slide.title %>
+            </div>
+              <%= link_to slide_share_path(share.id, @slide.id), method: :get do %>
+                <div class='slide-img-content'>
+                  <%= image_tag share.slide.images[0], class: "slide-img" %>
+                </div>
+              <% end %>
+          </li>
         <% end %>
-        </li>
-      <% end %>
-    </ul>
+      </ul>
+    <% else %>
+      <div class=no-slide>No Slide</div>
     <% end %>
   <% end %>
 </body>
