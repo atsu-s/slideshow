@@ -28,9 +28,11 @@
   <div class='flex'>
     <div class="delete-btn" id="delete_btn">SHOWを消す</div>
   </div>
-  <div class='flex'>
-    <%= link_to 'Share', new_slide_share_path(@slide.id), class: "slide-share"%>
-  </div>
+  <% unless @slide.share.present?%>
+    <div class='flex'>
+      <%= link_to 'Shareする', new_slide_share_path(@slide.id), class: "slide-share"%>
+    </div>
+  <% end %>
   <div class='flex'>
     <%= link_to 'Comment', "#", class: "slide-comment"%>
   </div>

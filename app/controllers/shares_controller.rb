@@ -1,4 +1,5 @@
 class SharesController < ApplicationController
+  before_action :set_share, only: [:show, :destroy]
   before_action :set_slide, only: [:index, :new, :create, :show]
 
   def index
@@ -19,12 +20,20 @@ class SharesController < ApplicationController
   end
 
   def show
-    @share = Share.find(params[:id])
+  end
+
+  def destroy
+    @share.destroy
+    redirect_to root_path
   end
 
   private
   def share_params
     params.require(:share).permit(:text).merge(slide_id: @slide.id)
+  end
+
+  def set_share
+    @share = Share.find(params[:id])
   end
 
   def set_slide

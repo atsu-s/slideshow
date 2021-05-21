@@ -1,3 +1,6 @@
+<header class='top-page-header'>
+  <div><%= link_to "SLIDESHOW", root_path, class:  "top"%></div>
+</header>
 <%= form_with model: @share, url: slide_shares_path, method: :post, local: true do |f| %>
 <body>
   <div class='nil'></div>
@@ -16,9 +19,21 @@
     <div class='slide-creator-wave'>〜</div>
   </div>
   <%= f.text_area :text, class:"share-text", placeholder:"Slide説明（必須 100文字まで)", maxlength:"100" %>
-  <label>
-    <div class="share">Share</div>
-    <%= f.submit "Share", class: :form_btn%>
+  <ul class="alert">
+    <li class="red-alert">注意事項</li>
+    <li class="alert-text">※他のユーザーへの誹謗中傷等が含まれるslideの公開はご遠慮ください</li>
+    <li class="alert-text">※一度公開したslideは、slideを削除しなければ公開され続けてしまいます</li>
+    <li class="alert-end">上記の事をご了承頂きますよう、御願い申し上げます</li>
+  </ul>
+  <label class="share-btn">
+    <div class="share">Shareする</div>
+    <%= f.submit "Shareする", class: :form_btn%>
   </label>
 </body>
+  <%# 戻るボタン %>
+  <%= link_to :back, class: "roll-back" do%>
+    <div class="roll-back-btn">BACK
+      <i class="fas fa-undo-alt"></i>
+    </div>
+  <% end %>
 <% end %>
