@@ -1,5 +1,5 @@
 <header class="top-page-header">
-  <div><%= link_to "SLIDESHOW", root_path, class:  "top"%></div>
+  <div><%= link_to "SLIDESHOW", slide_shares_path, class:  "top"%></div>
 </header>
 <body>
 <div class="nil"></div>
@@ -33,4 +33,12 @@
     <%= link_to 'Comment', slide_comments_path(@slide.id), class: "slide-comment"%>
   </div>
 </div>
+  <%# 戻るボタン %>
+  <div class="roll-back">
+    <%= link_to slide_shares_path, class: "roll-back-btn" do%>
+      <div class="back">BACK
+        <i class="fas fa-undo-alt"></i>
+      </div>
+    <% end %>
+  </div>
 </body>
