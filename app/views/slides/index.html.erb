@@ -20,7 +20,7 @@
         <li class="pull-down-list-3" id="pull_down_list_3"><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete, class: "pull-down-logout" %></li>
       </ul>
   <% else %>
-    <li><%= link_to 'LOGIN', new_user_session_path, class: "login" %></li>
+    <%= link_to 'LOGIN', new_user_session_path, class: "login" %>
   <% end %>
 </header>
 <body>
