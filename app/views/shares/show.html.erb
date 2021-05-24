@@ -32,6 +32,27 @@
   <div class="flex">
     <%= link_to 'Comment', slide_comments_path(@slide.id), class: "slide-comment"%>
   </div>
+
+  <%# Ajaxコメント %>
+  <div>※モラルを守ってコメントしましょう</div>
+  <%= form_with model: [@slide, @comment],url: slide_comments_path, method: :post, local: true do |f| %>
+    <div class="field">
+      <%= f.label :comment, "Comment form" %><br />
+      <%= f.text_area :comment_text, placeholder:"Comment（必須 50文字まで)", class:"comment-text" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "送信する", class: :form__btn %>
+    </div>
+  <% end %>
+  <ul class="comments_lists">
+    <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+    <% @comments.each do |comment| %>
+      <li class="comments_list">
+        <%= comment.user.nickname %>
+        <%= comment.comment_text %>
+      </li>
+    <% end %>
+
 </div>
   <%# 戻るボタン %>
   <div class="roll-back">

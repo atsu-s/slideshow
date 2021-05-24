@@ -20,6 +20,8 @@ class SharesController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @slide.comments.includes(:user)
   end
 
   def destroy

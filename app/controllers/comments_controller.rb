@@ -5,14 +5,10 @@ class CommentsController < ApplicationController
     @comments = Comment.order("created_at DESC")
   end
 
-  def new
-    @comment = Comment.new
-  end
-
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to slide_comments_path
+      redirect_to slide_shares_path
     else
       @slide = @comment.slide
       @comments = @slide.comments
