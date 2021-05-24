@@ -208,7 +208,11 @@ h3 {
 }
 
 .fas {
-  padding-left: 5px;
+  padding: 5px;
+}
+
+#menu_down {
+  display: none;
 }
 
 .show-lists{
@@ -219,7 +223,7 @@ h3 {
   background-color: #ffffff;
 }
 
-.pull-down-list{
+.pull-down-list-1, .pull-down-list-2, .pull-down-list-3 {
   padding: 15px 35px 15px 15px;
   border: 1px solid #eee;
 }
