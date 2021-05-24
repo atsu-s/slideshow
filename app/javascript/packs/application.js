@@ -13,6 +13,7 @@ require('create.js')
 require('../delete')
 require('../preview')
 require('../comment')
+require('../button')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

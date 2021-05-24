@@ -7,7 +7,7 @@
   padding-top: 20px;
 }
 
-.login, .logout{
+.login, .logout {
   color: white;
   font-size: 20px;
   border: solid 3px white;
@@ -104,15 +104,6 @@ h3 {
   padding: 5px;
 }
 
-.create {
-  box-sizing: border-box;
-  font-size: 100px;
-  color: white;
-  background-color: #419be0;
-  border: solid 2px black;
-  text-decoration: none;
-  padding: 10px;
-}
 // slick
 .preview {
   margin: 0 auto;
@@ -199,4 +190,48 @@ h3 {
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
   animation-delay: 2s;
+}
+
+// プルダウン
+.background-red{
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  box-sizing:  border-box;
+  font-size: 20px;
+  color: white;
+  background-color: palevioletred;
+  border: solid 4px ;
+  line-height: 50px;
+  padding: 10px;
+  margin-right: 5vw;
+}
+
+.fas {
+  padding-left: 5px;
+}
+
+.show-lists{
+  width: 150px;
+  position: absolute;
+  top : 0;
+  right: 0;
+  background-color: #ffffff;
+}
+
+.pull-down-list{
+  padding: 15px 35px 15px 15px;
+  border: 1px solid #eee;
+}
+
+.create {
+  text-decoration: none;
+}
+
+.go-share {
+  text-decoration: none;
+}
+
+.pull-down-logout {
+  text-decoration: none;
 }
