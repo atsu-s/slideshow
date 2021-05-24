@@ -3,6 +3,7 @@ class SlidesController < ApplicationController
 
   def index
     @slides = Slide.order("created_at DESC")
+    @shares = Share.order("created_at DESC")
   end
 
   def new
