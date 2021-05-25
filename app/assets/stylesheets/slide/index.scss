@@ -110,6 +110,17 @@ h3 {
   padding: 5px;
 }
 
+.create {
+  box-sizing:  border-box;
+  box-sizing: border-box;
+  font-size: 100px;
+  color: white;
+  background-color: #419be0;
+  border: solid 2px black;
+  text-decoration: none;
+  padding: 10px;
+}
+
 // slick
 .preview {
   margin: 0 auto;
@@ -245,14 +256,29 @@ h3 {
   border: 1px solid #eee;
 }
 
-.create {
+.pulldown-create {
   text-decoration: none;
+  color: #333;
+}
+
+.pulldown-create:hover {
+  opacity: 0.7;
 }
 
 .go-share {
   text-decoration: none;
+  color: #333;
 }
 
-.pull-down-logout {
+.go-share:hover {
+  opacity: 0.7;
+}
+
+.pulldown-logout {
   text-decoration: none;
+  color: #333;
+}
+
+.pulldown-logout:hover {
+  opacity: 0.7;
 }
