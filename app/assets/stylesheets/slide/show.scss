@@ -67,6 +67,7 @@
 .delete-btn {
   text-decoration: none;
   font-size: 15px;
+  cursor : pointer;
 }
 
 .delete-btn:hover {
@@ -109,6 +110,13 @@
   font-size: 40px;
   border: groove 5px purple;
   margin-left: 20vw;
+  padding: 10px;
+  cursor : pointer;
+}
+
+.cancel-btn:hover {
+  background-color: purple;
+  color: white;
 }
 
 .slide-destroy-btn {
@@ -117,4 +125,10 @@
   color: black;
   font-size: 40px;
   border: groove 5px purple;
+  padding: 10px;
+}
+
+.slide-destroy-btn:hover {
+  background-color: purple;
+  color: white;
 }
