@@ -1,5 +1,5 @@
 <header class='top-page-header'>
-<div><%= link_to "SLIDESHOW", root_path, class:  "top"%></div>
+<div><%= link_to "SLIDESHOW", root_path, class: "top", id: "page_top" %></div>
 <% if user_signed_in? %>
   <div class='nav'>
     <ul class='sign'>
@@ -22,13 +22,13 @@
       <ul class="slide-lists">
         <% @shares.each do |share| %>
           <li class='slide-list'>
-            <div class='slide-title-content'>
+            <div class='slide-title-content' id="slide_img_content">
               <div class='slide-title-head'>title:</div>
               <%= share.slide.title %>
             </div>
               <%= link_to slide_share_path(share.id, @slide.id), method: :get do %>
                 <div class='slide-img-content'>
-                  <%= image_tag share.slide.images[0], class: "slide-img" %>
+                  <%= image_tag share.slide.images[0], class: "slide-img", id: "slide_img" %>
                 </div>
               <% end %>
           </li>
@@ -40,9 +40,9 @@
   <% end %>
 </body>
   <%# 戻るボタン %>
-  <div class="roll-back">
-    <%= link_to :back, class: "roll-back-btn" do%>
-      <div class="back">BACK
+  <div class="roll-back" >
+    <%= link_to :back, class: "roll-back-btn", id: "roll_back" do%>
+      <div class="back" id="roll_back_btn">BACK
         <i class="fas fa-undo-alt"></i>
       </div>
     <% end %>

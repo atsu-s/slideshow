@@ -1,5 +1,5 @@
 <header class='top-page-header'>
-  <div><%= link_to "SLIDESHOW", root_path, class:  "top"%></div>
+  <div><%= link_to "SLIDESHOW", root_path, class:  "top", id: "page_top"%></div>
 </header>
 <div class="nil"></div>
 <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>

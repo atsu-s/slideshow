@@ -1,5 +1,5 @@
 <header class='top-page-header'>
-  <div><%= link_to "SLIDESHOW", root_path, class:  "top"%></div>
+  <div><%= link_to "SLIDESHOW", root_path, class:  "top", id: "page_top"%></div>
 </header>
 <%= form_with model: @share, url: slide_shares_path, method: :post, local: true do |f| %>
 <body>
@@ -31,7 +31,7 @@
   </label>
 </body>
   <%# 戻るボタン %>
-  <div class="roll-back">
+  <div class="roll-back" id="roll_back">
     <%= link_to :back, class: "roll-back-btn" do%>
       <div class="back">BACK
         <i class="fas fa-undo-alt"></i>

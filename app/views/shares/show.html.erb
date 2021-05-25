@@ -1,6 +1,6 @@
 <header class="top-page-header">
-  <div><%= link_to "SLIDESHOW", slide_shares_path, class:  "top"%></div>
-  <%= link_to 'SHOWを観る', slide_image_path(@slide.id), method: :get, class: "share-slide-look"%>
+  <div><%= link_to "SLIDESHOW", slide_shares_path, class: "top", id: "page_top"%></div>
+  <%= link_to 'SHOWを観る', slide_image_path(@slide.id), method: :get, class: "share-slide-look", id: "share_slide_btn" %>
 </header>
 <body>
 <div class="nil"></div>
@@ -49,9 +49,9 @@
     <% end %>
 </div>
   <%# 戻るボタン %>
-  <div class="roll-back">
-    <%= link_to slide_shares_path, class: "roll-back-btn" do%>
-      <div class="back">BACK
+  <div class="roll-back" >
+    <%= link_to slide_shares_path, class: "roll-back-btn", id: "roll_back" do%>
+      <div class="back" id="roll_back_btn">BACK
         <i class="fas fa-undo-alt"></i>
       </div>
     <% end %>

@@ -177,25 +177,36 @@ h3 {
   display: flex;
   opacity: 0;
   animation-name: fadein-bottom;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 .slide-title-head {
   color: purple;
+  margin-bottom: 1vh;
+}
+.slide-img-content {
+  overflow: hidden;
 }
 
 .slide-img {
   height: 40vh;
   width: 30vw;
-  opacity: 0;
-  animation-name: fadein-bottom;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  animation-delay: 2s;
+  // opacity: 0;
+  // animation-name: fadein-bottom;
+  // animation-duration: 2s;
+  // animation-timing-function: ease-out;
+  // animation-fill-mode: forwards;
+  // animation-delay: 2s;
+  transition-duration: 0.3s;
+}
+
+.slide-img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+  opacity: 0.8;
 }
 
 // プルダウン

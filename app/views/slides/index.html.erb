@@ -1,5 +1,5 @@
 <header class='top-page-header'>
-<div><%= link_to "SLIDESHOW", root_path, class:  "top"%></div>
+<div><%= link_to "SLIDESHOW", root_path, class:  "top", id: "page_top"%></div>
   <% if user_signed_in? %>
     <div class='nav'>
       <ul class='sign'>
@@ -46,8 +46,8 @@
           <%= slide.title %>
         </div>
         <%= link_to slide_path(slide.id), method: :get do %>
-          <div class='slide-img-content'>
-            <%= image_tag slide.images[0], class: "slide-img" %>
+          <div class="slide-img-content" id="slide_img_content">
+            <%= image_tag slide.images[0], class: "slide-img", id: "slide_img"%>
           </div>
         <% end %>
         </li>
