@@ -74,13 +74,17 @@
 }
 
 .slide-share {
-  display: inline-flex;
   text-decoration: none;
-  color: black;
-  font-size: 40px;
-  border: groove 5px purple;
-  justify-content: center;
-  padding: 0 28px;
+  font-size: 15px;
+  color: #333;
+}
+
+.slide-share:hover {
+  opacity: 0.7;
+}
+
+.share-status {
+  font-size: 20px;
 }
 
 // 削除画面
