@@ -24,9 +24,14 @@
 
 window.addEventListener('load', function(){
   const resetButton = document.getElementById("reset_btn");
-  const imageContent = document.querySelector('img');
+  const saveButton = document.getElementById("save_btn")
 
   resetButton.addEventListener('click', function(){
+    this.setAttribute("style", "background-color: #FFFF99;")
     window.location.reload();
+  })
+
+  saveButton.addEventListener('click', function(){
+    this.setAttribute("style", "background-color: #FFFF99;")
   })
 });

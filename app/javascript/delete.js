@@ -6,6 +6,7 @@ window.addEventListener('load', function(){
   const slideDestroy = document.getElementById("slide_destroy")
   const cancelButton = document.getElementById("cancel_btn")
   const deleteSubmit = document.getElementById("delete")
+  const rollBack = document.getElementById("roll_back")
 
   deleteButton.addEventListener('click', function(){
     showScreen.setAttribute("style", "display:none;");
@@ -13,6 +14,7 @@ window.addEventListener('load', function(){
     slideDestroy.setAttribute("style", "display:flex;");
     cancelButton.setAttribute("style", "display:inline;");
     deleteSubmit.setAttribute("style", "display:inline;");
+    rollBack.setAttribute("style", "display:none;");
   
     cancelButton.addEventListener('click', function(){
       window.location.reload();

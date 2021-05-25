@@ -13,6 +13,10 @@ require('create.js')
 require('../delete')
 require('../preview')
 require('../comment')
+require('../pulldown')
+require('../button')
+require('../rollback')
+require('../header')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

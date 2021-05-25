@@ -7,13 +7,19 @@
   padding-top: 20px;
 }
 
-.login, .logout{
-  color: white;
-  font-size: 20px;
-  border: solid 3px white;
+.login {
   text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  box-sizing:  border-box;
+  font-size: 20px;
+  color: white;
+  background-color: palevioletred;
+  border: solid 4px ;
+  line-height: 50px;
   padding: 10px;
-  margin-right: 50px;
+  margin-right: 5vw;
 }
 
 .title {
@@ -104,15 +110,6 @@ h3 {
   padding: 5px;
 }
 
-.create {
-  box-sizing: border-box;
-  font-size: 100px;
-  color: white;
-  background-color: #419be0;
-  border: solid 2px black;
-  text-decoration: none;
-  padding: 10px;
-}
 // slick
 .preview {
   margin: 0 auto;
@@ -180,23 +177,82 @@ h3 {
   display: flex;
   opacity: 0;
   animation-name: fadein-bottom;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 .slide-title-head {
   color: purple;
+  margin-bottom: 1vh;
+}
+.slide-img-content {
+  overflow: hidden;
 }
 
 .slide-img {
   height: 40vh;
   width: 30vw;
-  opacity: 0;
-  animation-name: fadein-bottom;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  animation-delay: 2s;
+  // opacity: 0;
+  // animation-name: fadein-bottom;
+  // animation-duration: 2s;
+  // animation-timing-function: ease-out;
+  // animation-fill-mode: forwards;
+  // animation-delay: 2s;
+  transition-duration: 0.3s;
+}
+
+.slide-img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+  opacity: 0.8;
+}
+
+// プルダウン
+.background-red{
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  box-sizing:  border-box;
+  font-size: 20px;
+  color: white;
+  background-color: palevioletred;
+  border: solid 4px ;
+  line-height: 50px;
+  padding: 10px;
+  margin-right: 5vw;
+}
+
+.fas {
+  padding: 5px;
+}
+
+#menu_down {
+  display: none;
+}
+
+.show-lists{
+  width: 150px;
+  position: absolute;
+  top : 0;
+  right: 0;
+  background-color: #ffffff;
+}
+
+.pull-down-list-1, .pull-down-list-2, .pull-down-list-3 {
+  padding: 15px 35px 15px 15px;
+  border: 1px solid #eee;
+}
+
+.create {
+  text-decoration: none;
+}
+
+.go-share {
+  text-decoration: none;
+}
+
+.pull-down-logout {
+  text-decoration: none;
 }

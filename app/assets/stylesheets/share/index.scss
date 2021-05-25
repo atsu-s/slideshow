@@ -1,3 +1,18 @@
+.logout {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  box-sizing:  border-box;
+  font-size: 20px;
+  color: white;
+  background-color: palevioletred;
+  padding: 10px;
+  line-height: 6.5vh;
+  border: solid 4px;
+  margin-right: 5vw;
+}
+
 .no-slide {
   display: flex;
   justify-content: center;

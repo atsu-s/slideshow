@@ -1,5 +1,10 @@
 <header class='top-page-header'>
-  <div><%= link_to "SLIDESHOW", root_path, class:  "top"%></div>
+  <div><%= link_to "SLIDESHOW", root_path, class:  "top", id: "page_top"%></div>
+      <div class="background-red" id="lists">menu<i class="fas fa-sort-up" id="menu_up"></i><i class="fas fa-sort-down" id="menu_down"></i></div>
+      <ul class="show-lists hidden" id="pull-down">
+        <li class="pull-down-list-1" id="pull_down_list_1"><%= link_to 'SHOWを観る', slide_image_path(@slide.id), method: :get, class: "slide-look"%></li>
+        <li class="pull-down-list-2" id="pull_down_list_2"><div class="delete-btn" id="delete_btn">SHOWを消す</div></li>
+      </ul>
 </header>
 <body>
 <div class="nil"></div>
@@ -19,14 +24,10 @@
     <%= @slide.title %>
     <div class='slide-creator-wave'>〜</div>
   </div>
-  <div class='flex'>
-    <%= link_to 'SHOWを観る', slide_image_path(@slide.id), method: :get, class: "slide-look"%>
-  </div>
   <%# <div class='flex'>
     <%= link_to 'SHOWを直す', edit_slide_path(@slide.id), method: :get, class: "slide-edit"%>
   <%# </div> %>
   <div class='flex'>
-    <div class="delete-btn" id="delete_btn">SHOWを消す</div>
   </div>
   <% unless @slide.share.present?%>
     <div class='flex'>
@@ -35,9 +36,9 @@
   <% end %>
 </div>
   <%# 戻るボタン %>
-  <div class="roll-back">
-    <%= link_to root_path, class: "roll-back-btn" do%>
-      <div class="back">BACK
+  <div class="roll-back" >
+    <%= link_to root_path, class: "roll-back-btn", id: "roll_back" do%>
+      <div class="back" id="roll_back_btn">BACK
         <i class="fas fa-undo-alt"></i>
       </div>
     <% end %>
