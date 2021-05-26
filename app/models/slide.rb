@@ -1,6 +1,6 @@
 class Slide < ApplicationRecord
   with_options presence: true do
-    validates :title
+    validates :title, length: { maximum: 20 }
     validates :images
   end
 
