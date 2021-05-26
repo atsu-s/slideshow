@@ -47,7 +47,7 @@
       <label class="form-text">Gender</label>
       <span class="indispensable">必須</span>
   </div>
-    <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-sex"}) %>
+    <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-sex"}) %>
   <div class="register-btn" id="user_red_btn">
     <%= f.submit "Sign up" ,class:"register-red-btn" %>
   </div>
