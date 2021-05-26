@@ -20,7 +20,7 @@
         <li class="pull-down-list-3" id="pull_down_list_3"><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete, class: "pulldown-logout" %></li>
       </ul>
   <% else %>
-    <%= link_to 'LOGIN', new_user_session_path, class: "login" %>
+    <%= link_to 'LOGIN', new_user_session_path, class: "login", id: "share_slide_btn" %>
   <% end %>
 </header>
 <body>
@@ -31,7 +31,7 @@
         <div class='main-title'>あなたもSLIDESHOWでSHOWを創りませんか？</div>
       </div>
     <div class= 'new'>
-      <%= link_to '新規登録はこちら', new_user_registration_path, class: "sign-up"%>
+      <%= link_to '新規登録はこちら', new_user_registration_path, class: "sign-up", id: "sign_up" %>
     </div>
   <%else%>
     <% if current_user.slides.present? %>

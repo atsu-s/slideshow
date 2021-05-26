@@ -22,6 +22,10 @@
   margin-right: 5vw;
 }
 
+.login:hover {
+  background-color: #FFBEDA;
+}
+
 .title {
   display: flex;
   justify-content: center;
@@ -64,10 +68,15 @@
   border: solid 3px orange;
   text-decoration: none;
   font-size: 50px;
-
   padding: 40px;
   margin-top: 10%;
 }
+
+.sign-up:hover {
+  background-color: wheat;
+  color: lightcoral;
+}
+
 .greeting {
   display: flex;
   margin-right: 10px;
@@ -240,6 +249,7 @@ h3 {
   line-height: 50px;
   padding: 10px;
   margin-right: 5vw;
+  cursor: pointer;
 }
 
 .fas {

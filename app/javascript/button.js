@@ -1,17 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-  const pageTop = document.getElementById("page_top")
-  
-  pageTop.addEventListener('mouseover', function(){
-    this.setAttribute("style", "color:#FFBEDA;")
-  })
+  const signUp = document.getElementById("sign_up")
 
-  pageTop.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "color:#FFBEDA;")
-  })
-
-  pageTop.addEventListener('click', function(){
-    this.setAttribute("style", "color:white;")
+  signUp.addEventListener('click', function(){
+    this.setAttribute("style", "background-color:#FF9933;")
   })
 
   const slideTop = document.getElementById("slide_img")
@@ -19,4 +11,5 @@ document.addEventListener("DOMContentLoaded", function(){
   slideTop.addEventListener('click', function(){
     this.setAttribute("style", "filter:opacity(90%);")
   })
+
 });
