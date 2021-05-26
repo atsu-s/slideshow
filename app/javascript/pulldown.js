@@ -31,8 +31,8 @@ window.addEventListener('load', function(){
       menuUp.setAttribute("style", "display:none;")
       menuDown.setAttribute("style", "display:inline;")
       pullDownTop.animate([{opacity: '0'}, {opacity: '1'}], 1000)
-      pullDownMiddle.animate([{opacity: '0'}, {opacity: '1'}], 2000)
       pullDownBottom.animate([{opacity: '0'}, {opacity: '1'}], 3000)
+      pullDownMiddle.animate([{opacity: '0'}, {opacity: '1'}], 2000)
     }
   })
 })

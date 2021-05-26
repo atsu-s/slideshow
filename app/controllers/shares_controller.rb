@@ -41,5 +41,4 @@ class SharesController < ApplicationController
   def set_slide
     @slide = Slide.find_by(id: params[:slide_id])
   end
-
 end
