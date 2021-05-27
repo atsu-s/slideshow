@@ -77,9 +77,11 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 
 .roll-back {
   color: white;
+  font-family: serif;
 }
 
 .roll-back-btn {
+  bottom: 0;
   display: block;
   text-decoration: none;
   text-align: center;
@@ -89,4 +91,11 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
   border: solid 1px yellowgreen;
   width: 10vw;
   margin-left: auto;
+}
+
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
 }

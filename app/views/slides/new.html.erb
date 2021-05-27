@@ -97,16 +97,6 @@
   </section>
 <% end %>
 
-<%# 戻るボタン %>
-  <div class="roll-back" >
-    <%= link_to :back, class: "roll-back-btn", id: "roll_back" do%>
-      <div class="back" id="roll_back_btn">BACK
-        <i class="fas fa-undo-alt"></i>
-      </div>
-    <% end %>
-  </div>
-
-
     <%# swiper %>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
   <script>
@@ -129,3 +119,14 @@
   })
   </script>
 </body>
+
+<footer>
+<%# 戻るボタン %>
+  <div class="roll-back" >
+    <%= link_to :back, class: "roll-back-btn", id: "roll_back_btn" do%>
+      <div class="back" id="back_btn">BACK
+        <i class="fas fa-undo-alt"></i>
+      </div>
+    <% end %>
+  </div>
+</footer>

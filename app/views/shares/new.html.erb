@@ -34,13 +34,17 @@
     <div class="share">Shareする</div>
     <%= f.submit "Shareする", class: :form_btn%>
   </label>
+  <div class='nil'></div>
 </body>
+
+<footer>
   <%# 戻るボタン %>
   <div class="roll-back" id="roll_back">
-    <%= link_to :back, class: "roll-back-btn" do%>
-      <div class="back">BACK
+    <%= link_to slide_path(@slide.id), class: "roll-back-btn", id: "rool_back_btn" do%>
+      <div class="back" id="back_btn">BACK
         <i class="fas fa-undo-alt"></i>
       </div>
     <% end %>
   </div>
+</footer>
 <% end %>
