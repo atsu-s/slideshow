@@ -22,7 +22,7 @@ RSpec.describe Comment, type: :model do
       it 'comment_textが101文字以上だとコメントできない' do
         @comment.comment_text = "a" * 101
         @comment.valid?
-        expect(@comment.errors.full_messages).to include("Comment text is too long (maximum is 100 characters)")
+        expect(@comment.errors.full_messages).to include("Comment text は100文字以内で入力して下さい")
       end
 
       it 'userが紐付いていないとコメントできない' do

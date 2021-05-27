@@ -22,7 +22,7 @@ RSpec.describe Share, type: :model do
       it 'textが101文字以上だと公開できない' do
         @share.text = "a" * 101
         @share.valid?
-        expect(@share.errors.full_messages).to include("Text is too long (maximum is 100 characters)")
+        expect(@share.errors.full_messages).to include("Text は100文字以内で入力して下さい")
       end
 
       it 'slideが紐付いていないと登録できない' do

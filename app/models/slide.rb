@@ -1,6 +1,6 @@
 class Slide < ApplicationRecord
   with_options presence: true do
-    validates :title, length: { maximum: 20 }
+    validates :title, length: { maximum: 20, message: "は20文字以内で入力して下さい" }
     validates :images
   end
 

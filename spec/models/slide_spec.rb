@@ -22,7 +22,7 @@ RSpec.describe Slide, type: :model do
       it 'titleが21文字以上だと作成できない' do
         @slide.title = "a" * 21
         @slide.valid?
-        expect(@slide.errors.full_messages).to include("Title is too long (maximum is 20 characters)")
+        expect(@slide.errors.full_messages).to include("Title は20文字以内で入力して下さい")
       end
 
       it '画像が空だと作成できない' do
