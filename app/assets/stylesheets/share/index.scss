@@ -7,9 +7,9 @@
   font-size: 20px;
   color: white;
   background-color: palevioletred;
+  border: solid 4px ;
+  line-height: 51px;
   padding: 10px;
-  line-height: 6.5vh;
-  border: solid 4px;
   margin-right: 5vw;
 }
 
@@ -23,4 +23,12 @@
   font-size: 40px;
   opacity: 0.4;
   margin-top: 40vh;
+}
+
+@media (max-width: 599px) {
+  .logout {
+    font-size: 10px;
+    line-height: 22px;
+    margin-right: 10vw;
+  }
 }

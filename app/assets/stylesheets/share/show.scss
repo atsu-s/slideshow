@@ -48,3 +48,11 @@
   text-align: center;
   font-size: 20px;
 }
+
+@media (max-width: 599px) {
+  .share-slide-look {
+    font-size: 10px;
+    line-height: 22px;
+    margin-right: 10vw;
+  }
+}

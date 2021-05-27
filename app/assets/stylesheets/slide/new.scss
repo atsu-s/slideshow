@@ -87,3 +87,28 @@ img {
   border: 2px solid black;
   z-index: 100;
 }
+
+@media (max-width: 599px) {
+  .form-image {
+    height: 40vh;
+    width: 60vw;
+  }
+
+
+  .reset {
+    font-size: 10px;
+    line-height: 22px;
+    margin-right: 10vw;
+  }
+
+  .save {
+    font-size: 10px;
+    line-height: 22px;
+    margin-right: 10vw;
+  }
+
+  img {
+    height: 40vh;
+    width: 60vw;
+  }
+}

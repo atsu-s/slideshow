@@ -132,3 +132,23 @@
   background-color: purple;
   color: white;
 }
+
+@media (max-width: 599px) {
+  .slide-creator {
+    font-size: 50px;
+  }
+
+  .slide-top-img {
+    width: 80%;
+    height: auto;
+  }
+
+  .really {
+    font-size: 30px;
+    margin: 20vh auto ;
+  }
+
+  .cancel-btn {
+    margin-left: 10vw;
+  }
+}

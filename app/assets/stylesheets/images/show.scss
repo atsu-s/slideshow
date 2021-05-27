@@ -134,3 +134,13 @@ display: inline-block;
   z-index: 0;
 }
 
+@media (max-width: 599px) {
+  .slide-around {
+    height: 100vh;
+  }
+
+  .slider-img {
+    width: 50vw;
+    height: 40vh;
+  }
+}

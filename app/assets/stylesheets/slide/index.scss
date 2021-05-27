@@ -299,3 +299,75 @@ h3 {
 .pulldown-logout:hover {
   opacity: 0.7;
 }
+
+@media (max-width: 599px) {
+  // トップ画面
+  .login {
+    font-size: 10px;
+    line-height: 15px;
+    margin-right: 10vw;
+  }
+
+  .main-title {
+    text-align: center;
+    font-size: 50px;
+  }
+
+
+  .hello {
+    font-size: 20px;
+  }
+
+  .user-nickname {
+    font-size: 20px;
+  }
+
+  .background-red {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  // 説明画面
+  .introduction {
+    font-size: 30px;
+  }
+
+  .slider {
+    width: auto;
+    height: 50vh;
+  }
+
+  h3 {
+    font-size: 20px;
+    padding: 60px 30px 60px 30px;
+  }
+
+  .let {
+    font-size : 50px;
+  }
+
+  .fa-arrow-alt-circle-left {
+    visibility:hidden;
+  }
+
+  .fa-arrow-alt-circle-right {
+    visibility:hidden;
+  }
+
+  .show-index {
+    font-size: 20px;
+  }
+
+  .slide-title-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .slide-img {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
