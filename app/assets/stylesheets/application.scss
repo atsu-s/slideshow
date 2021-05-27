@@ -37,6 +37,18 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import "slick-theme";
 @import "slick"; 
 
+.error-alert {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.error-message {
+  font-size: 1.2vw;
+  list-style: square;
+  color: rgb(182, 48, 0);
+}
+
 .top-page-header {
   background-color: palevioletred;
   width: 100vw;

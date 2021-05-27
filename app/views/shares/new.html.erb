@@ -1,7 +1,9 @@
 <header class='top-page-header'>
   <div><%= link_to "SLIDESHOW", root_path, class:  "top", id: "page_top"%></div>
 </header>
+
 <%= form_with model: @share, url: slide_shares_path, method: :post, local: true do |f| %>
+
 <body>
   <div class='nil'></div>
   <div class='slide-creator'>Slide Creator</div>
@@ -18,6 +20,9 @@
     <%= @slide.title %>
     <div class='slide-creator-wave'>〜</div>
   </div>
+
+  <%= render 'shared/error_messages', model: f.object %>
+
   <%= f.text_area :text, class:"share-text", placeholder:"Slide説明（必須 100文字まで)", maxlength:"100" %>
   <ul class="alert">
     <li class="red-alert">注意事項</li>
