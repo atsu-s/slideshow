@@ -1,4 +1,5 @@
 class SharesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_share, only: [:show, :destroy]
   before_action :set_slide, only: [:index, :new, :create, :show]
 

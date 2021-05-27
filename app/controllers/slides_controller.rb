@@ -1,4 +1,5 @@
 class SlidesController < ApplicationController
+  before_action :authenticate_user!, except: :index
   before_action :set_slide, only: [:show, :destroy]
 
   def index
