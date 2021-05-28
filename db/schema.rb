@@ -77,4 +77,5 @@ ActiveRecord::Schema.define(version: 2021_05_21_063615) do
   add_foreign_key "comments", "slides"
   add_foreign_key "comments", "users"
   add_foreign_key "shares", "slides"
+  add_foreign_key "slides", "users"
 end
