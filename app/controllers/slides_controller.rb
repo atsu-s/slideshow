@@ -1,6 +1,7 @@
 class SlidesController < ApplicationController
   before_action :authenticate_user!, except: :index
   before_action :set_slide, only: [:show, :destroy]
+  before_action :set_login, only: [:show, :destroy]
 
   def index
     @slides = Slide.order("created_at DESC")
@@ -34,5 +35,11 @@ class SlidesController < ApplicationController
 
   def set_slide
     @slide = Slide.find(params[:id])
+  end
+
+  def set_login
+    unless current_user.id == @slide.user.id
+      redirect_to action: :index
+    end
   end
 end

@@ -2,6 +2,7 @@ class SharesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_share, only: [:show, :destroy]
   before_action :set_slide, only: [:index, :new, :create, :show]
+  before_action :redirect_root, only: [:new, :create]
 
   def index
     @shares = Share.order("created_at DESC")
@@ -41,5 +42,11 @@ class SharesController < ApplicationController
 
   def set_slide
     @slide = Slide.find_by(id: params[:slide_id])
+  end
+
+  def redirect_root
+    if @slide.share.present?
+      redirect_to root_path
+    end
   end
 end
